@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "itGlobers",
+    "slug": "itGlobers",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
