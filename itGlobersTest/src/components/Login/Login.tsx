@@ -1,22 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, TextInput, View , TouchableOpacity ,Image} from 'react-native';
 import {Text} from "react-native-web";
 
 
 
 export default function Login() {
+  const [username,setUsername] = useState('');
+  const [password,setpassword] = useState('');
+
+
   return (
       <View style={styles.container}>
-          <Image style={ styles.logoImage} source = { require("../../../assets/images/logo.png")}
+          <Image style={ styles.logoImage}
+                 source = { require("../../../assets/images/logo.png")}
                  resizeMode="contain"/>
+
           <Text style={ styles.text }>Email</Text>
-          <TextInput style={styles.textInput} placeholder="Email"></TextInput>
+          <TextInput style={styles.textInput} onChangeText={setUsername} value={username} placeholder="Email"></TextInput>
+
           <Text style={ styles.text }>Password</Text>
-          <TextInput secureTextEntry={true} style={styles.textInput} placeholder="Password"></TextInput>
+          <TextInput secureTextEntry={true} onChangeText={setpassword} value={password} style={styles.textInput} placeholder="Password"></TextInput>
 
           <TouchableOpacity style={ styles.btn }>
                 <Text style={ styles.text }>Login</Text>
           </TouchableOpacity>
+
           <TouchableOpacity style={ styles.btn }>
               <Text style={ styles.text }>Register</Text>
           </TouchableOpacity>
