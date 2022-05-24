@@ -8,7 +8,7 @@ export default function Login() {
           <Image style={ styles.logoImage} source = { require("../../../assets/images/logo.png")}
                  resizeMode="contain"/>
           <Text style={ styles.text }>Email</Text>
-          <TextInput style={styles.textInput} placeholder="Emails"></TextInput>
+          <TextInput style={styles.textInput} placeholder="Email"></TextInput>
           <Text style={ styles.text }>Password</Text>
           <TextInput secureTextEntry={true} style={styles.textInput} placeholder="Password"></TextInput>
 
