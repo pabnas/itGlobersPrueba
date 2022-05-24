@@ -22,7 +22,7 @@ export default function Login() {
 
           <Text style={ styles.text }>Email</Text>
           <TextInput style={styles.textInput} onChangeText={setUsername}
-                     value={username} placeholder="Email"></TextInput>
+                     value={username} placeholder="email@email.com"></TextInput>
 
           <Text style={ styles.text }>Password</Text>
           <TextInput secureTextEntry={true} onChangeText={setpassword} value={password}
