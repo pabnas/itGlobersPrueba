@@ -5,9 +5,11 @@ const imageBackground = require('./assets/images/it-globers-bkg1.jpg');
 
 
 export default function App() {
-  return (
+    return (
       <View style={styles.container}>
-        <Login/>
+          <ImageBackground source={imageBackground} style={styles.image}>
+            <Login/>
+          </ImageBackground>
       </View>
   );
 }
