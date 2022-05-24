@@ -2,11 +2,13 @@ import axios from "axios";
 
 const url: string = "https://reqres.in"
 
-function loginUser(user) {
+function login(user) {
     axios.post(url + '/api/login', user)
         .then()
-        .catch(function (error){ console.log(error) });
+        .catch(function (error){
+            let errorMsg = error.response.data.error
+            console.log(errorMsg);
+            return(errorMsg);
+        });
 }
-
-
-export {loginUser}
+export { login }

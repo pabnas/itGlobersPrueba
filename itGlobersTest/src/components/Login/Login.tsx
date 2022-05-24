@@ -1,7 +1,12 @@
 import React, {useState} from 'react';
 import {StyleSheet, TextInput, View , TouchableOpacity ,Image} from 'react-native';
 import {Text} from "react-native-web";
+import { login } from "../Api/Api";
 
+function logInUser(username: string, password: string) {
+    const user = { email: username , password: password};
+    login(user);
+}
 
 
 export default function Login() {
@@ -16,12 +21,14 @@ export default function Login() {
                  resizeMode="contain"/>
 
           <Text style={ styles.text }>Email</Text>
-          <TextInput style={styles.textInput} onChangeText={setUsername} value={username} placeholder="Email"></TextInput>
+          <TextInput style={styles.textInput} onChangeText={setUsername}
+                     value={username} placeholder="Email"></TextInput>
 
           <Text style={ styles.text }>Password</Text>
-          <TextInput secureTextEntry={true} onChangeText={setpassword} value={password} style={styles.textInput} placeholder="Password"></TextInput>
+          <TextInput secureTextEntry={true} onChangeText={setpassword} value={password}
+                     style={styles.textInput} placeholder="Password"></TextInput>
 
-          <TouchableOpacity style={ styles.btn }>
+          <TouchableOpacity style={ styles.btn } onPress={() => logInUser(username,password) }>
                 <Text style={ styles.text }>Login</Text>
           </TouchableOpacity>
 
