@@ -1,21 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import Login from './src/components/Login/Login';
+import {StyleSheet, View, ImageBackground} from 'react-native';
+
+const imageBackground = require('./assets/images/it-globers-bkg1.jpg');
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <View style={styles.container}>
+        <ImageBackground source={ imageBackground } resizeMode="cover" style={styles.image}>
+            <Login/>
+        </ImageBackground>
+      </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f1f1f1',
     alignItems: 'center',
     justifyContent: 'center',
   },
+    image:{
+        width: '100%',
+        height: '100%',
+        flex: 1
+    }
 });

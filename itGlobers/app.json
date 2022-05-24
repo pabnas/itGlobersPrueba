@@ -1,10 +1,11 @@
 {
   "expo": {
     "name": "itGlobers",
-    "slug": "itGlobers",
+    "slug": "itgloberstest",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "description": ""
   }
 }
